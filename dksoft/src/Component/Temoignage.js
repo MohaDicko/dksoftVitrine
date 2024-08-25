@@ -2,10 +2,9 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
 // Importation des images locales
-import image1 from "../Component/images/CICR_Logo.webp";
-import image2 from "../Component/images/giz.webp";// Correction de l'emplacement de l'image
+import image1 from "../images/CICR_Logo.webp";
+import image2 from "../images/giz.webp";// Correction de l'emplacement de l'image
 
 const testimonials = [
   {

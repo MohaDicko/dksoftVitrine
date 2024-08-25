@@ -1,13 +1,13 @@
 import React from 'react';
 import { Card, CardBody, Typography } from '@material-tailwind/react';
-import htmlLogo from './assets/html-logo.png'; // Assurez-vous d'avoir les logos dans le dossier assets
-import cssLogo from './assets/css-logo.png';
-import jsLogo from './assets/js-logo.png';
-import reactLogo from './assets/react-logo.png';
-import androidLogo from './assets/android-logo.png';
-import iosLogo from './assets/ios-logo.png';
+import htmlLogo from '../images/HTML.webp'; // Assurez-vous d'avoir les logos dans le dossier assets
+import cssLogo from '../images/CSS.webp';
+import jsLogo from '../images/js.webp';
+import reactLogo from '../images/Reactjs.webp';
+import androidLogo from '../images/android.webp';
+import iosLogo from '../images/ios.webp';
 
-const Service = () => {
+const Services = () => {
   return (
     <div className="container mx-auto p-4">
       <Typography variant="h1" color="blue-gray" className="text-center mb-8">
@@ -43,4 +43,4 @@ const Service = () => {
   );
 };
 
-export default Service;
+export default Services;
