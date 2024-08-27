@@ -1,7 +1,6 @@
 import React from 'react';
 import { Card, CardBody, Typography } from '@material-tailwind/react';
 
-
 const consultingServices = [
   "Conseil en transformation numérique : Accompagnement des entreprises dans leur transition vers le numérique, en optimisant leurs processus via des solutions digitales.",
   "Stratégie digitale : Élaboration de stratégies pour maximiser la présence en ligne, y compris le SEO, les médias sociaux, et le marketing digital.",
@@ -25,19 +24,19 @@ const developmentServices = [
 
 const Services = () => {
   return (
-    <div className="container mx-auto p-4   bg-gray-500">
-      <Typography variant="h1" color="blue-gray" className="text-center mb-8">
+    <div className="container mx-auto p-4 bg-gray-100">
+      <Typography variant="h1" color="blue-gray" className="text-center mb-8 font-bold text-4xl">
         Nos Services
       </Typography>
       <div className="mb-8">
-        <Typography variant="h2" color="blue-gray" className="mb-4">
+        <Typography variant="h2" color="blue-gray" className="mb-4 text-2xl font-semibold">
           Services de Consulting
         </Typography>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {consultingServices.map((service, index) => (
-            <Card key={index}>
+            <Card key={index} className="shadow-lg rounded-lg">
               <CardBody>
-                <Typography variant="body1" color="blue-gray">
+                <Typography variant="body1" color="blue-gray" className="text-lg">
                   {service}
                 </Typography>
               </CardBody>
@@ -46,24 +45,20 @@ const Services = () => {
         </div>
       </div>
       <div className="mb-8">
-        <Typography variant="h2" color="blue-gray" className="mb-4">
+        <Typography variant="h2" color="blue-gray" className="mb-4 text-2xl font-semibold">
           Services de Développement Web
         </Typography>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {developmentServices.map((service, index) => (
-            <Card key={index}>
+            <Card key={index} className="shadow-lg rounded-lg">
               <CardBody>
-                <Typography variant="body1" color="blue-gray">
+                <Typography variant="body1" color="blue-gray" className="text-lg">
                   {service}
                 </Typography>
               </CardBody>
             </Card>
           ))}
         </div>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        
-        
       </div>
     </div>
   );
