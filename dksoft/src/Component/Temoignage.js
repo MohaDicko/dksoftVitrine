@@ -70,29 +70,29 @@ const testimonials = [
 
 const Temoignage = () => {
   const settings = {
-    dots: true,
+   
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
   };
 
   return (
-    <div className="container mx-auto py-8  bg-gray-100 ">
-      <h2 className="text-4xl font-bold text-center mb-8"> . </h2>
+    <div className="container mx-auto py-12 bg-gray-100">
+      <h2 className="text-4xl font-bold text-center mb-12 text-blue-gray-800">Témoignages</h2>
       <Slider {...settings}>
         {testimonials.map((testimonial, index) => (
           <div key={index} className="p-4">
-            <div className="max-w-md mx-auto bg-tilexind-green rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+            <div className="max-w-lg mx-auto bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">
               <div className="md:flex">
                 <div className="md:flex-shrink-0">
-                  <img className="h-48 w-full object-cover md:w-48" src={testimonial.image} alt={testimonial.name} />
+                  <img className="h-64 w-full object-cover md:h-full md:w-64" src={testimonial.image} alt={testimonial.name} />
                 </div>
                 <div className="p-8">
-                  <div className="uppercase tracking-wide text-sm text-tilexind-green-dark font-semibold">{testimonial.name}</div>
-                  <p className="mt-2 text-tilexind-green-dark">{testimonial.text}</p>
+                  <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{testimonial.name}</div>
+                  <p className="mt-2 text-gray-600">{testimonial.text}</p>
                 </div>
               </div>
             </div>

@@ -1,19 +1,6 @@
 import { Typography } from "@material-tailwind/react";
 
-const LINKS = [
-  {
-    title: "Produit",
-    items: ["Aperçu", "Fonctionnalités", "Solutions", "Tutoriels"],
-  },
-  {
-    title: "Entreprise",
-    items: ["À propos de nous", "Carrières", "Presse", "Actualités"],
-  },
-  {
-    title: "Ressources",
-    items: ["Blog", "Newsletter", "Événements", "Centre d'aide"],
-  },
-];
+
 
 const currentYear = new Date().getFullYear();
 
@@ -23,40 +10,16 @@ export function Footer() {
       <div className="mx-auto w-full max-w-7xl px-8">
         <div className="grid grid-cols-1 justify-between gap-8 md:grid-cols-2">
           <Typography variant="h5" className="mb-6 text-white">
-            Material Tailwind
+            DK SOFT
           </Typography>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-            {LINKS.map(({ title, items }) => (
-              <ul key={title}>
-                <Typography
-                  variant="small"
-                  color="blue-gray"
-                  className="mb-3 font-medium opacity-70 text-gray-400"
-                >
-                  {title}
-                </Typography>
-                {items.map((link) => (
-                  <li key={link}>
-                    <Typography
-                      as="a"
-                      href={link === "Carte" ? "https://www.google.com/maps" : "#"}
-                      color="gray"
-                      className="py-1.5 font-normal transition-colors hover:text-white"
-                    >
-                      {link}
-                    </Typography>
-                  </li>
-                ))}
-              </ul>
-            ))}
-          </div>
+          
         </div>
         <div className="mt-12 flex w-full flex-col items-center justify-center border-t border-gray-700 py-4 md:flex-row md:justify-between">
           <Typography
             variant="small"
             className="mb-4 text-center font-normal text-gray-400 md:mb-0"
           >
-            &copy; {currentYear} <a href="https://material-tailwind.com/" className="hover:text-white">Material Tailwind</a>. Tous droits réservés.
+            &copy; {currentYear} <a href="https://material-tailwind.com/" className="hover:text-white">DK SOFT</a>. Tous droits réservés.
           </Typography>
           <div className="flex gap-4 text-gray-400 sm:justify-center">
             <Typography as="a" href="#" className="opacity-80 transition-opacity hover:opacity-100">

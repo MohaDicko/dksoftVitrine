@@ -1,35 +1,30 @@
 import React from "react";
 import { Button, Input, Textarea, Typography } from "@material-tailwind/react";
+import GoogleMapComponent from './GoogleMapComponent'; // Importez le composant Google Map
 
 export function Contact() {
   return (
-    <section className="px-8 py-8 lg:py-16  bg-gray-100  ">
+    <section className="px-8 py-8 lg:py-16 bg-gray-100">
       <div className="container mx-auto text-center">
         <Typography
           variant="h5"
           color="blue-gray"
           className="mb-4 !text-base lg:!text-2xl"
         >
-          Customer Care
+          
         </Typography>
         <Typography
           variant="h1"
           color="blue-gray"
           className="mb-4 !text-3xl lg:!text-5xl"
         >
-          We&apos;re Here to Help
+          Contact
         </Typography>
-        <Typography className="mb-10 font-normal !text-lg lg:mb-20 mx-auto max-w-3xl !text-gray-500">
-          Whether it&apos;s a question about our services, a request for
-          technical assistance, or suggestions for improvement, our team is
-          eager to hear from you.
-        </Typography>
+        
         <div className="grid grid-cols-1 gap-x-12 gap-y-6 lg:grid-cols-2 items-start">
-          <img
-            src="/image/map.svg"
-            alt="map"
-            className="w-full h-full lg:max-h-[510px]"
-          />
+          <div className="w-full h-full lg:max-h-[510px]">
+            <GoogleMapComponent />
+          </div>
           <form
             action="#"
             className="flex flex-col gap-4 lg:max-w-sm"
