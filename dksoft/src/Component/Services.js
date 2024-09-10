@@ -15,7 +15,7 @@ const developmentServices = [
 
 const Services = () => {
   return (
-    <div className="container mx-auto p-4 bg-gray-100">
+    <div className=" p-4 bg-gray-100" id="services">
       <Typography variant="h1" color="blue-gray" className="text-center mb-8 font-bold text-4xl">
         Nos Services
       </Typography>

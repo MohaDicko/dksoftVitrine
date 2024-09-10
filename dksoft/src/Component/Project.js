@@ -24,7 +24,7 @@ const projects = [
 
 const Project = () => {
   return (
-    <div className="container mx-auto py-8">
+    <div className="py-8" id="Project">
       <Typography variant="h2" color="blue-gray" className="mb-8 text-center">
         Nos Projets Réalisés
       </Typography>

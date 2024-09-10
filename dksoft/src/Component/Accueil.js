@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function Accueil() {
     return (
-        <div className="accueil-container">
+        <div id="acceuil">
             <h1>..</h1>
             <p> À propos DK Soft  
 DK Soft est une Entreprise de Services du Numérique experte dans le domaine des nouvelles technologies et de l'informatique.

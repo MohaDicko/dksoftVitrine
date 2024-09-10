@@ -1,10 +1,12 @@
 import React from 'react';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import { Footer } from '../Component/Footer';
+
 import { Outlet } from 'react-router-dom';
 import NavList from './NavList';
-import './Component/index.css';
+
+import { Footer } from '../Footer';
+import { Card } from '@material-tailwind/react';
 
 
 export default function Layout() {
@@ -15,7 +17,8 @@ export default function Layout() {
     <>
     
       <NavList/>
-        <div className="w-full max-w-screen-xl mx-auto">  
+     
+        <div className="w-full">  
           <Outlet />
         </div>
       <Footer></Footer>

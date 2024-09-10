@@ -80,9 +80,9 @@ const Temoignage = () => {
   };
 
   return (
-    <div className="container mx-auto py-12 bg-gray-100">
+    <div className="py-12 bg-gray-100 "id="Temoignages">
       <h2 className="text-4xl font-bold text-center mb-12 text-blue-gray-800">Témoignages</h2>
-      <Slider {...settings}>
+      <Slider {...settings} className='max-w-screen-xl mx-auto'>
         {testimonials.map((testimonial, index) => (
           <div key={index} className="p-4">
             <div className="max-w-lg mx-auto bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">

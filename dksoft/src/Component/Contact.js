@@ -4,7 +4,7 @@ import GoogleMapComponent from './GoogleMapComponent'; // Importez le composant 
 
 export function Contact() {
   return (
-    <section className="px-8 py-8 lg:py-16 bg-gray-100">
+    <section className="px-8 py-8 lg:py-16 bg-gray-100" id="Contact">
       <div className="container mx-auto text-center">
         <Typography
           variant="h5"
