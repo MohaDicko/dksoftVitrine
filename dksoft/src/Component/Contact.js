@@ -1,6 +1,7 @@
+// Contact.js
 import React from "react";
 import { Button, Input, Textarea, Typography } from "@material-tailwind/react";
-import GoogleMapComponent from './GoogleMapComponent'; // Importez le composant Google Map
+import GoogleMapComponent from './GoogleMapComponent'; // Assurez-vous que le chemin est correct
 
 export function Contact() {
   return (
@@ -11,7 +12,7 @@ export function Contact() {
           color="blue-gray"
           className="mb-4 !text-base lg:!text-2xl"
         >
-          
+          {/* Vous pouvez ajouter un sous-titre ou autre contenu ici */}
         </Typography>
         <Typography
           variant="h1"
