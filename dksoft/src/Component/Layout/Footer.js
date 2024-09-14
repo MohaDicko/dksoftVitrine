@@ -10,7 +10,7 @@ export function Footer() {
       <div className="mx-auto w-full max-w-7xl px-8">
         <div className="grid grid-cols-1 justify-between gap-8 md:grid-cols-2">
           <Typography variant="h5" className="mb-6 text-white">
-            DK SOFT
+            DK CONSULTING
           </Typography>
           
         </div>
