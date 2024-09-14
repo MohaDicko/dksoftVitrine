@@ -1,13 +1,9 @@
 import React from "react";
 import {
   Navbar,
-  
   Typography,
-  
   IconButton,
-  Card,
 } from "@material-tailwind/react";
-
 
 export function NavList() {
   const [openNav, setOpenNav] = React.useState(false);
