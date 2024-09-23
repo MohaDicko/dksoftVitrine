@@ -43,7 +43,7 @@ const Project = () => {
             <CardFooter className="pt-0">
               <Button
                 variant="gradient"
-                color="blue"
+                color="orange"
                 fullWidth
                 onClick={() => window.open(project.link, "_blank")}
               >
