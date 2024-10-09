@@ -3,19 +3,19 @@ import { Card, CardBody, CardFooter, Typography, Button } from "@material-tailwi
 
 const projects = [
   {
-    title: "Projet 1",
+    title: "RMA-ASSURANCE",
     description: "Description du projet 1",
     link: "https://www.assurancedevoyage.ma",
     image: "https://via.placeholder.com/300", // URL de l'image du projet 1
   },
   {
-    title: "Projet 2",
+    title: "SAHEL MARKET",
     description: "Description du projet 2",
     link: "https://www.example2.com",
     image: "https://via.placeholder.com/300", // URL de l'image du projet 2
   },
   {
-    title: "Projet 3",
+    title: "FIND IT",
     description: "Description du projet 3",
     link: "https://www.example3.com",
     image: "https://via.placeholder.com/300", // URL de l'image du projet 3
