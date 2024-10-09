@@ -35,7 +35,7 @@ export function Contact() {
         </Typography>
         
         <div className="grid grid-cols-1 gap-x-12 gap-y-6 lg:grid-cols-2 items-start">
-          <div className="w-full h-full lg:max-h-[510px]">
+          <div className="w-full h-64 lg:h-full lg:max-h-[510px]">
             <GoogleMapComponent />
           </div>
           <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-4 lg:max-w-sm">
