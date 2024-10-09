@@ -5,7 +5,7 @@ const projects = [
   {
     title: "Projet 1",
     description: "Description du projet 1",
-    link: "https://www.example1.com",
+    link: "https://www.assurancedevoyage.ma",
     image: "https://via.placeholder.com/300", // URL de l'image du projet 1
   },
   {
