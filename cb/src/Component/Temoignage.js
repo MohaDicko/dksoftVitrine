@@ -4,7 +4,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 // Importation des images locales
 import image1 from "../images/acf.webp";
-import image2 from "../images/giz.webp";
+import image2 from "../images/gizlogo.webp";
 import image3 from "../images/DRSVGAO.webp";
 import image4 from "../images/cicr.webp";
 import image5 from "../images/caritas.webp";
@@ -13,7 +13,7 @@ import image7 from "../images/ddrg.jpg";
 import image8 from "../images/lcv.png";
 
 
-const testimonials = [
+const Temoignages = [
   {
     name: 'ACF',
     text: ' "Notre collaboration avec Croix bleue a été exceptionnelle. Leur équipe est toujours disponible et prête à répondre à nos besoins. Nous recommandons vivement leurs services."',
@@ -72,7 +72,7 @@ const Testimonials = () => {
     <div className="py-12 bg-gray-100 "id="Temoignages">
       <h2 className="text-4xl font-bold text-center mb-12 text-blue-gray-800">Témoignages</h2>
       <Slider {...settings} className='max-w-screen-xl mx-auto'>
-        {testimonials.map((testimonial, index) => (
+        {Temoignages.map((testimonial, index) => (
           <div key={index} className="p-4">
             <div className="max-w-lg mx-auto bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">
               <div className="md:flex">
@@ -92,4 +92,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default Temoignages;

@@ -8,7 +8,7 @@ import Accueil from './Accueil';
 import { Card, Typography } from '@material-tailwind/react';
 
 
-import image from '../images/dksoftlogo.png';
+import image from '../images/veto4.jpg';
 import Contact from './Contact';
 
 

@@ -1,118 +1,151 @@
 import React from "react";
-import {
-  Navbar,
-  Typography,
-  IconButton,
-} from "@material-tailwind/react";
-import logo from '../../../images/dksoftlogo.png'; // Assurez-vous que ce chemin est correct
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import Menu from "@mui/material/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
+import Container from "@mui/material/Container";
+import Tooltip from "@mui/material/Tooltip";
+import MenuItem from "@mui/material/MenuItem";
+import PhoneIcon from "@mui/icons-material/Phone";
+// import AdbIcon from "@mui/icons-material/Adb";
+import { useTheme } from "@mui/material/styles";
+import { Button } from "@mui/material";
+import Logowhite from "../../assets/logooo.webp";
+const pages = [
+  "Qui sommes nous ?",
+  "Services",
+  "Formations",
+  "Témoignages",
+  "Contact",
+];
+const sectionIds = [
+  "presentation-section",
+  "seances-section",
+  "Formations-section",
+  "testimonials-section",
+  "contact-section",
+];
 
-export function NavList() {
-  const [openNav, setOpenNav] = React.useState(false);
+function Header ({ onNavigate }) {
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const theme = useTheme();
 
-  React.useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 960) {
-        setOpenNav(false);
-      }
-    };
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
 
-    window.addEventListener("resize", handleResize);
-
-    // Clean up the event listener on component unmount
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const navList = (
-    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      <Typography as="li" variant="small" color="blue-gray" className="p-1 font-normal text-base lg:text-lg">
-        <a href="/" className="flex items-center">
-          Accueil
-        </a>
-      </Typography>
-      
-      <Typography as="li" variant="small" color="blue-gray" className="p-1 font-normal text-base lg:text-lg">
-        <a href="#services" className="flex items-center">
-          Services
-        </a>
-      </Typography>
-     
-      <Typography as="li" variant="small" color="blue-gray" className="p-1 font-normal text-base lg:text-lg">
-        <a href="#Project" className="flex items-center">
-          Projets 
-        </a>
-      </Typography>
-
-      <Typography as="li" variant="small" color="blue-gray" className="p-1 font-normal text-base lg:text-lg">
-        <a href="#Temoignages" className="flex items-center">
-          Temoignages
-        </a>
-      </Typography>
-
-      <Typography as="li" variant="small" color="blue-gray" className="p-1 font-normal text-base lg:text-lg">
-        <a href="#Contact" className="flex items-center">
-          Contact
-        </a>
-      </Typography>
-    </ul>
-  );
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
 
   return (
-    <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4">
-      <div className="flex items-center justify-between text-blue-gray-900">
-        <a href="#">
-          {/* Le logo est responsive avec des classes Tailwind */}
-          <img src={logo} alt="DK Consulting Logo" className="h-8 w-auto sm:h-10 md:h-12 lg:h-14 rounded" />
-        </a>
-        <div className="flex items-center gap-4">
-          {/* Le menu de navigation s'affiche sur les grands écrans */}
-          <div className="mr-4 hidden lg:block">{navList}</div>
-          <IconButton
-            variant="text"
-            className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
-            ripple={false}
-            onClick={() => setOpenNav(!openNav)}
+    <AppBar
+      sx={{
+        backgroundColor: theme.palette.four.main,
+        color: theme.palette.one.main,
+      }}
+      position="sticky"
+    >
+      <Container maxWidth="xl">
+        <Toolbar variant="dense">
+          <img src={Logowhite} alt="logo" height={40} width={40} />
+          {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
+          <Typography
+            variant="h6"
+            noWrap
+            component="a"
+            href="/"
+            sx={{
+              mr: 2,
+              ml: 1,
+              display: { xs: "none", md: "flex" },
+              fontFamily: "Dancing Script",
+              fontWeight: "bolder",
+              letterSpacing: ".3rem",
+              color: "inherit",
+              textDecoration: "none",
+            }}
+            className="titleLogo"
           >
-            {openNav ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                className="h-6 w-6"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
+            {"Cabinet Veterinaire "}
+          </Typography>
+
+          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+            <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              color="inherit"
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "left",
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "left",
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{
+                display: { xs: "block", md: "none" },
+              }}
+            >
+              {pages.map((page, index) => (
+                <MenuItem
+                  key={page}
+                  onClick={() => {
+                    onNavigate(sectionIds[index]);
+                    handleCloseNavMenu();
+                  }}
+                >
+                  <Typography textAlign="center">{page}</Typography>
+                </MenuItem>
+              ))}
+            </Menu>
+          </Box>
+
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            {pages.map((page, index) => (
+              <Button
+                key={page}
+                onClick={() => onNavigate(sectionIds[index])}
+                sx={{ my: 2, color: "white", display: "block" }}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={2}
+                {page}
+              </Button>
+            ))}
+          </Box>
+
+          <Box sx={{ flexGrow: 0, display: "flex", alignItems: "center" }}>
+            <Tooltip title="Call Us">
+              <IconButton
+                sx={{ color: "white" }}
+                component="a"
+                href="tel: +22373363201"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            )}
-          </IconButton>
-        </div>
-      </div>
-      {/* Le menu déroulant pour les petits écrans */}
-      {openNav && (
-        <div className="block lg:hidden">
-          {navList}
-        </div>
-      )}
-    </Navbar>
+                <PhoneIcon className="tel" />
+              </IconButton>
+            </Tooltip>
+            <Typography variant="h6" sx={{ color: "white", ml: 1 }}>
+            +22373363201
+            </Typography>
+          </Box>
+        </Toolbar>
+      </Container>
+    </AppBar>
   );
 }
 
-export default NavList;
+export default Header;
