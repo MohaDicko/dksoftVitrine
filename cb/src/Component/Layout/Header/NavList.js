@@ -13,7 +13,7 @@ import PhoneIcon from "@mui/icons-material/Phone";
 // import AdbIcon from "@mui/icons-material/Adb";
 import { useTheme } from "@mui/material/styles";
 import { Button } from "@mui/material";
-import Logowhite from "../../assets/veto4.jpg";
+import Logowhite from "../../../images/veto4.jpg";
 const pages = [
   "Qui sommes nous ?",
   "Services",
